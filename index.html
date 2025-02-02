@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+function fizzbuzz(){
+    for(let i=1;i<=100;i++){
+        if(i%3==0&&i%5==0){
+            console.log("fizz buzz");
+
+        }
+        else if(i%3==0){
+           console.log("fizz");
+
+        }
+        else if(i%5==0){
+            console.log("buzz");
+        }
+        else{ console.log("not divisible by 3 and 5");
+
+ }
+}
+}
+fizzbuzz();
+function outerFunction(x){
+    return function innerFunction(y){
+        return x+y;
+    };
+    }
+    const addFive = outerFunction(5);
+    console.log(addFive(10));
+    //closer
+    function createCounter(){
+        let count =0;
+        return{
+            increament:function(){
+                count++;
+            },
+            getCounter:function(){
+                return count;
+            }
+        }
+    }
+    const counter = createCounter();
+
+    counter.increament();
+    console.log(counter.getCounter());
+
+    counter.increament();
+    console.log(counter.getCounter());
+
+    counter.increament();
+    console.log(counter.getCounter());
+//anonymous and arrow function
+//anonymous
+const greet = function(name){
+    return `hello,${name}`
+}
+console.log(greet("Alice"))
+
+
+const fact = function(num){
+
+    console.log(num)
+    let fact =1;
+    for(let i =1;i<=num;i++){
+        fact=fact*i;
+       
+    }
+    return fact; //console.log(fact())
+}
+console.log(fact(5))
+   
+
+</script>
